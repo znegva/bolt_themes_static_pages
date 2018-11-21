@@ -15,3 +15,9 @@ php app/nut database:update
 ```
 php app/nut server:run
 ```
+
+## Update submodules (our themes)
+
+```
+git submodule update --recursive --remote
+```
