@@ -75,6 +75,7 @@ pages:
             type: templateselect
             filter: '*.twig'
     taxonomy: [ groups ]
+    hide_publish_date: true
     recordsperpage: 20
 
 
@@ -137,6 +138,7 @@ showcases:
     slug: showcases
     singular_name: Showcase
     singular_slug: showcase
+    hide_in_listings: true
     fields:
         title:
             type: text
