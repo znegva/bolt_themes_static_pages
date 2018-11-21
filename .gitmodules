@@ -1,0 +1,3 @@
+[submodule "bolt/public/theme/hyde-for-bolt"]
+	path = bolt/public/theme/hyde-for-bolt
+	url = https://github.com/znegva/hyde-for-bolt.git
