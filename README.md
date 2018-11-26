@@ -41,3 +41,8 @@ __preview mirror inside tmp__
 make serve_tmp
 ```
 To quickcheck if mirroring was successful we can start a simple webserver!
+
+
+## Copy to `docs` directory__
+
+When your mirror looks fine it can be copied to its own subdir inside of the `docs` directory. The `docs`-dir will be be published using github-pages.
