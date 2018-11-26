@@ -21,3 +21,9 @@ php app/nut server:run
 ```
 git submodule update --recursive --remote
 ```
+
+### after initial git pull
+
+```
+git submodule update --init --recursive
+```
