@@ -1,0 +1,311 @@
+/*
+ *  __                  __
+ * /\ \                /\ \
+ * \ \ \___   __  __   \_\ \     __
+ *  \ \  _ `\/\ \/\ \  /'_` \  /'__`\
+ *   \ \ \ \ \ \ \_\ \/\ \_\ \/\  __/
+ *    \ \_\ \_\/`____ \ \___,_\ \____\
+ *     \/_/\/_/`/___/> \/__,_ /\/____/
+ *                /\___/
+ *                \/__/       for Bolt
+ *
+ * Hyde was designed, built, and released under MIT license by @mdo.
+ * Learn more at https://github.com/poole/hyde.
+ *
+ * Some additional CSS-Rules are required for the Bolt port.
+ */
+
+
+/* clickable excerpt in listings */
+
+a.readmore,
+.post-date a {
+    color: inherit !important;
+}
+
+.post-date a,
+.post-date span,
+.post-date i {
+    margin-right: 0.5rem;
+}
+
+a:hover.readmore {
+    text-decoration: none;
+    color: #888 !important;
+}
+
+
+/* remove pading from pre */
+
+pre {
+    padding: 0;
+}
+
+
+/* remove round corners from images */
+
+img {
+    border-radius: 0px;
+}
+
+
+/* styling for related posts - insprired by latest post styling */
+
+.latest {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    /* border-top: 1px solid #eee; */
+}
+
+.latest-posts {
+    padding-left: 0;
+    list-style: none;
+}
+
+.latest-posts h3 {
+    margin-top: 0;
+}
+
+.latest-posts li small {
+    font-size: 75%;
+    color: #999;
+}
+
+.latest-posts li a:hover {
+    color: #268bd2;
+    text-decoration: none;
+}
+
+.latest-posts li a:hover small {
+    color: inherit;
+}
+
+/* readmore of listings */
+
+p.post-teaser{
+    clear: both;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+p.post-teaser a.readmore{
+    width: 100%;
+    overflow: hidden;
+}
+
+p.post-teaser a.readmore img{
+    max-width: 100%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+	/* prevent blurry scaling */
+	-webkit-backface-visibility: hidden;
+    -ms-transform: translateZ(0); /* IE 9 */
+    -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+    transform: translateZ(0);
+}
+p.post-teaser a.readmore img:hover{
+    -webkit-transform:scale(1.024); /* Safari and Chrome */
+    -moz-transform:scale(1.024); /* Firefox */
+    -ms-transform:scale(1.024); /* IE 9 */
+    -o-transform:scale(1.024); /* Opera */
+     transform:scale(1.024);
+}
+
+
+
+/* gallery thumbnails */
+
+.thumbs {
+	display: flex;
+	overflow: hidden;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.thumbs > a {
+	position: relative;
+	display: block;
+	height: 150px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	flex-grow: 1;
+
+	overflow: hidden;
+}
+.thumbs > a > img {
+	height: 150px;
+	max-width: 100%;
+	min-width: 100%;
+	vertical-align: bottom;
+	object-fit: cover;
+
+	-webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+
+	/* prevent blurry scaling */
+	-webkit-backface-visibility: hidden;
+    -ms-transform: translateZ(0); /* IE 9 */
+    -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+    transform: translateZ(0);
+}
+.thumbs > a > img:hover {
+    -webkit-transform:scale(1.024); /* Safari and Chrome */
+    -moz-transform:scale(1.024); /* Firefox */
+    -ms-transform:scale(1.024); /* IE 9 */
+    -o-transform:scale(1.024); /* Opera */
+     transform:scale(1.024);
+}
+.thumbs:after {
+	content: '';
+	flex-grow: 999999999;
+	min-width: 250px;
+	height: 0;
+}
+
+/* copyright notice */
+
+.copyright {
+    font-size: 70%;
+    padding-top: 1rem;
+}
+
+.copyright dt {
+    display: inline;
+    float: left;
+}
+
+
+/* basic forms - search */
+
+.button,
+button,
+input,
+textarea,
+select {
+    height: 2rem;
+    padding: 0 1rem;
+    color: #555;
+    font-size: 0.7rem;
+    line-height: 1.4rem;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border-radius: 4px;
+    border: 1px solid #bbb;
+    box-sizing: border-box;
+}
+
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    display: inline-block;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    border: 1px solid #bbb;
+    cursor: pointer;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input:focus {
+    color: #333;
+    border-color: #888;
+    outline: 0;
+}
+
+/* style forms */
+form #form{
+  display: table;
+}
+form #form > div{
+  display: table-row;
+}
+form #form > div > label,
+form #form > div > input{
+  display: table-cell;
+  margin-top: 10px;
+  padding-right: 20px;
+}
+
+form fieldset{
+    border: none;
+    padding: 0;
+}
+form fieldset > input.button{
+    margin-top: 10px;
+}
+
+
+/* search in sidebar */
+
+#searchform-sidebar input {
+    color: #fff;
+    border: 0px solid;
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    ;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    /* safari needs this */
+    -webkit-appearance: none;
+    /* safari needs this */
+    text-align: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    letter-spacing: inherit;
+    padding: 0px;
+    /* Safari still adds a "padding-left" on the text/placeholder, this can only be
+    removed by remove type="search" from the input, but then we would lose ability
+    to clear the searchterm with the little x or ESC
+    so: Safari-users need to live with the padding */
+    max-width: 150px;
+}
+
+#searchform-sidebar input:focus {
+    border-bottom: 1px solid #fff;
+}
+
+#searchform-sidebar button {
+    display: none;
+}
+
+/* pagination items */
+a.pagination-item:hover{
+    text-decoration: none;
+}
+
+/* highlight warning */
+.warning {
+    border: 1px solid #F99;
+    background-color: #FDD;
+    font-weight: bold;
+    color: #600;
+    padding: 4px 8px;
+}
+
+/* prefixes for tags and categories */
+span.taxonomies a.tags::before {
+    content: "#";
+}
+span.taxonomies a.categories::before {
+    content: "@";
+}
