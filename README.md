@@ -2,28 +2,42 @@
 A repository to host static version of websites demonstrating Bolt CMS themes
 
 
-## (Re)Install Bolt CMS
+## Setup
 
+__(Re)Install Bolt CMS__
 ```
 php composer.phar update
 php app/nut cache:clear
 php app/nut database:update
 ```
-
-## Run the server
-
+__after initial git pull__
 ```
-php app/nut server:run
+git submodule update --init --recursive
 ```
-
-## Update submodules (our themes)
-
+__Update submodules (our themes)__
 ```
 git submodule update --recursive --remote
 ```
 
-### after initial git pull
 
+
+## Build static site with wget
+__run the Bolt-server__
 ```
-git submodule update --init --recursive
+php app/nut server:run
 ```
+
+__on other terminal: create the static mirror site inside of the tmp-directory__
+```
+make mirror_to_tmp
+```
+This calls wget and creates a mirror inside of `/tmp`. We assume our Bolt server is reachable at `0.0.0.0:8000`!  
+Since wget does rename some `jpg` to `jpgg` inside if `srcset` for unknown reasons we need to rerename them...  
+Wget also does not copy resources specified by untypical attributes, since the gpx-feature uses such an attribute to define the gpx-file we need to copy this file by hand!  
+All this is done inside of `make mirror_to_tmp`.
+
+__preview mirror inside tmp__
+```
+make serve_tmp
+```
+To quickcheck if mirroring was successful we can start a simple webserver!
