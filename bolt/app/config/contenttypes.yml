@@ -142,10 +142,10 @@ entries:
             group: media
             label: 'GPX track related to the post'
     relations:
-        pages:
-          multiple: false
+        entries:
+          multiple: true
           order: title
-          label: Select a page
+          label: Select related entries
     taxonomy: [ categories, tags ]
     record_template: entry.twig
     listing_template: listing.twig
