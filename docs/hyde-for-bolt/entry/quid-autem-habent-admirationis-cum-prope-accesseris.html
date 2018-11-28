@@ -166,7 +166,7 @@
             
                             
 
-<section id="gpxviewer" class="gpx" data-gpx-source="/files/2018-11/1-roscoff-morlaix-a-parcours.gpx?05fdc7b60a" data-map-target="demo-map">
+<section id="gpxviewer" class="gpx" src="../files/tracks/1-roscoff-morlaix-a-parcours.gpx?c0df8c8bca" data-map-target="demo-map">
     <article>
         <div class="map" id="demo-map"></div>
     </article>
@@ -228,7 +228,7 @@
         if (!elt)
             return;
 
-        var url = elt.getAttribute('data-gpx-source');
+        var url = elt.getAttribute('src');
         var mapid = elt.getAttribute('data-map-target');
         if (!url || !mapid)
             return;
