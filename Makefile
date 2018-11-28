@@ -8,3 +8,7 @@ clean_tmp:
 
 serve_tmp:
 	php -S localhost:8001 -t tmp/0.0.0.0:8000
+
+use_tmp_as_hyde_for_bolt_mirror:
+	rm -rf docs/hyde-for-bolt
+	cp -r tmp/0.0.0.0:8000 docs/hyde-for-bolt

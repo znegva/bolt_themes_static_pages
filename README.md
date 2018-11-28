@@ -43,6 +43,10 @@ make serve_tmp
 To quickcheck if mirroring was successful we can start a simple webserver!
 
 
-## Copy to `docs` directory__
+__copy to `docs` directory__
 
-When your mirror looks fine it can be copied to its own subdir inside of the `docs` directory. The `docs`-dir will be be published using github-pages.
+When your mirror looks fine it can be copied to its own subdir inside of the `docs` directory.  
+```
+make use_tmp_as_hyde_for_bolt_mirror
+```
+The `docs`-dir will be be published using github-pages.
