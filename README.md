@@ -1,5 +1,5 @@
 # bolt_themes_static_pages
-A repository to host static version of websites demonstrating Bolt CMS themes
+A repository to host static websites to demonstrate my Bolt CMS themes.
 
 
 ## Setup
