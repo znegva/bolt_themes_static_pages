@@ -38,6 +38,7 @@ homepage:
     viewless: true
     singleton: true
     default_status: published
+    hide_publish_date: true
     icon_many: "fa:home"
     icon_one: "fa:home"
 
