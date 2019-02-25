@@ -34,7 +34,7 @@ __on other terminal: create the static mirror site inside of the tmp-directory__
 make mirror_to_tmp
 ```
 This calls wget and creates a mirror inside of `/tmp`. We assume our Bolt server is reachable at `0.0.0.0:8000`!  
-Since wget does rename some `jpg` to `jpgg` inside if `srcset` for unknown reasons we need to rerename them...  
+Since wget does rename some `jpg` to `jpgg` inside of `srcset` for unknown reasons we need to rerename them...  
 Wget also does not copy resources specified by untypical attributes, since the gpx-feature uses such an attribute to define the gpx-file we need to copy this file by hand!  
 All this is done inside of `make mirror_to_tmp`.
 
