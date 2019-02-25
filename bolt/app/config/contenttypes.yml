@@ -134,6 +134,11 @@ entries:
             label: 'Show captions for gallery'
             variant: inline
             group: media
+        show_gallery_first_entry_big:
+            type: checkbox
+            default: false
+            label: 'Shall the first gallery image be shown bigger'
+            variant: inline
         copyright:
             type: markdown
             group: media

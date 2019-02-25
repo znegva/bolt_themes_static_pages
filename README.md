@@ -10,6 +10,9 @@ php composer.phar update
 php app/nut cache:clear
 php app/nut database:update
 ```
+
+We used znegva:password as login for the database in this repository.
+
 __after initial git pull__
 ```
 git submodule update --init --recursive
@@ -20,11 +23,10 @@ git submodule update --recursive --remote
 ```
 
 
-
 ## Build static site with wget
 __run the Bolt-server__
 ```
-php app/nut server:run
+make serve_bolt
 ```
 
 __on other terminal: create the static mirror site inside of the tmp-directory__
@@ -37,10 +39,11 @@ Wget also does not copy resources specified by untypical attributes, since the g
 All this is done inside of `make mirror_to_tmp`.
 
 __preview mirror inside tmp__
+To quickcheck if mirroring was successful we can start a simple webserver!
 ```
 make serve_tmp
 ```
-To quickcheck if mirroring was successful we can start a simple webserver!
+
 
 
 __copy to `docs` directory__
